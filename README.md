@@ -1,1 +1,11 @@
+This repository contains the finished model for object detection of 4 different categories of litter items: soda cans, plastic water bottles, chip bags, and paper trays. It consists of a frozen inference graph that was extracted from a Faster R-CNN Inception model. The model was trained for 5 days using a custom data set. The CSV files for the dataset are available at the Litterally-Trash-Dataset repository (https://github.com/rajvi-tiwari/Litterally-Trash-Dataset). The train.record and test.record files created for this can be found within the current repository too.
 
+There are three Python scripts to test and run the object detector on your computer. Make sure you have tensorflow, opencv and all the dependecies installed (preferably in an Anaconda virtual environment with Python 3.5). They are called 'Object_detection_image', 'Object_detection_video' and 'Object_detection_webcam.' The first file can be used on a test image of one of the four types of trash, the second file can take video input and the last file is used for real-time detection using a webcame or USB camera.
+
+To run object detection in your computer do the following steps:
+1) Clone this repository 
+2) Make sure you have all dependencies like TensorFlow, openCV, etc. installed in an Anaconda virtual environment.
+3) To test your object detector, move a picture of the object or objects into the \object_detection\final_test_images folder, and change the IMAGE_NAME variable in the Object_detection_image.py to match the file name of the picture. Alternatively, you can use a video of the objects (using Object_detection_video.py), or just plug in a USB webcam and point it at the objects (using Object_detection_webcam.py).
+4) To run the scripts, open Anaconda Prompt and activate the environment you set up in step 2.
+5) Type "idle" in the comand line and then run it This opens IDLE and from here you can navigate to this repository and to the \object_detection folder. Open any of the  Object_detection_image.py or Object_detection_video.py or Object_detection_webcam.py files that you wanted to test and use "Run Module" to run them.
+6) Assuming everything is working perfectly and the envirnment is correctly set up, the object detector will initialize for 10 seconds and then display a window showing the objects it has detected.
